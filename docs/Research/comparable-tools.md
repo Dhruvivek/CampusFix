@@ -119,3 +119,61 @@ Research for [issue #3](https://github.com/Dhruvivek/CampusFix/issues/3). The qu
 - **A Form + Sheet prototype is a legitimate first test** for the evaluation deliverable. It could check whether students report more once friction drops, before a custom build is justified. Its known weakness, no feedback loop, is exactly what a later iteration would fix.
 - **Check whether the college already runs a UGC-mandated grievance portal.** Position CampusFix as the lightweight facilities route that sits beside it, not as a replacement.
 - **Watch for concentrated participation.** Expect a few heavy reporters, such as class reps, and don't read report counts as student-wide demand.
+
+## Addendum (second pass, 2026-10-26): Forms settings, QR-code tools, Indian campus systems
+
+A second research pass on the same ticket covered items the first pass skipped: Forms access controls, QR-code maintenance tools, and two more Indian campus complaint systems. Same conventions: **Fact** is cited, **Inference** is reasoning.
+
+### A1. Google Forms: more facts relevant to the HOD's needs
+
+**Facts**
+- *Restrict to org:* for a form made in a Google Workspace account, "By default, access is restricted to people inside your organization. People must sign in with their email address to access your form." The owner can turn off "Restrict to users in [domain]". [Google Workspace Learning Center: Create your first form](https://support.google.com/a/users/answer/9303071?hl=en)
+- *Response to Sheet:* responses can be summarised in the form or stored "in a linked Google Sheet". "When you create a new response spreadsheet, form collaborators automatically get access to it." [Google Docs Editors Help: Choose where to save form responses](https://support.google.com/docs/answer/2917686)
+- *What respondents can see:* with "View results summary" turned on, "Response summaries show full text responses or charts for each question and are visible to anyone who can respond to the form." The owner can also turn on "Allow response editing", and "Limit to 1 response" forces sign-in. [Google Docs Editors Help: Publish & share your form](https://support.google.com/docs/answer/160000)
+- *Staff alerting:* the owner can turn on "Get email notifications for new responses". [Google Docs Editors Help: View & manage form responses](https://support.google.com/docs/answer/139706)
+- *Microsoft equivalent:* in Microsoft Forms, "Only people in my organization can respond" blocks anyone outside the organization, even with the link. "Record name" records each respondent's name and email. [Microsoft Support: Choose who can fill out a form](https://support.microsoft.com/en-us/education/forms/choose-who-can-fill-out-a-form-or-quiz) File upload "is only available when 'Only people in my organization can respond' or 'Specific people in my organization can respond' is the selected setting". Files go to the owner's OneDrive for Business, with at most 10 files per question. [Microsoft Support: File upload questions](https://support.microsoft.com/en-us/office/add-questions-that-allow-for-file-uploads-in-microsoft-forms-6a75a658-c02b-450e-b119-d068f3cba4cf)
+
+**Inferences**
+- Which form tool fits depends on who hosts the college email. A college on Google Workspace gets "restrict to org + Verified email + photo upload" for free. A college on Microsoft 365 gets the same from Microsoft Forms. With a college email that is neither, Google's file upload works with any personal Google account, so the identity would be a Gmail address, not the college one. **The repo has not yet established which host the college uses.**
+- "View results summary" is not a status view. It shows every respondent's text answers to every other respondent, which leaks report contents and gives no status per report. Status would still need a staff-maintained column, plus a filtered Sheet published separately so reporters' emails and photos stay hidden.
+- A Form is per submission and has no concept of a room. A QR code per room can still pre-fill the room field through a pre-filled form link (I did not verify this feature against Google docs in this pass).
+
+### A2. QR-code maintenance reporting tools (commercial CMMS request portals)
+
+**Facts**
+- **MaintainX request portal:** "Anyone with access to the request portal link or QR code can submit a request", and they don't need to log in. Each portal has printable QR codes. "MaintainX organization Administrators must view and approve or decline all work requests." "Portal users can choose to receive email updates when the status of their work request changes." It is only on the Premium and Enterprise plans. [MaintainX Help: Set up a request portal](https://help.getmaintainx.com/set-up-a-request-portal)
+- **UpKeep request portal:** "no UpKeep login required". "Email is required", and requesters can attach photos. Status updates go to the requester's email. It is only on the Professional and Enterprise plans. [UpKeep Help: Company request portal](https://help.onupkeep.com/en/articles/4730258-how-to-utilize-your-company-request-portal) UpKeep QR codes "can be placed anywhere in your facilities". [UpKeep Help: Configure the new request portal](https://help.onupkeep.com/en/articles/12158452-configure-the-new-upkeep-request-portal)
+- **Ohio University classroom help system (2023):** "Faculty and students" report problems by "scanning the QR codes located on classroom lecterns". The system "assigns support requests to the responsible unit and notifies them". [Ohio University news, Sep 2023](https://www.ohio.edu/news/2023/09/new-classroom-help-system-launched-athens-campus-improve-support-requests-response)
+- None of these sources documents duplicate handling.
+
+**Inferences**
+- *What they do well:* a QR code per location, intake without login, photo attachments, an approval queue for staff, and status emails to the requester. That is close to the leaning for CampusFix v1.
+- *What they do badly here:* they sit on paid tiers, and they trade identity for low friction. An email typed into a no-login portal is not verified identity, so it would not meet the HOD's requirement. They are built around a maintenance team's work queue, and other reporters can't see existing reports.
+
+### A3. Indian campus complaint systems (more examples)
+
+**Facts**
+- **IIT Kanpur IWD Complaint Management System** (institute document, undated): you "sign-in using your IIT K email-id and password. There is no need to register here separately." The complaint form asks for the category, sub-category, problem description, problem location, address, contact details and time of availability. After signing in you see three panels: Complaint form, Unresolved complaints and Resolved complaints. "You can comment about your problems and see the complaint status any time." [IIT Kanpur: IWD complaint system (PDF)](https://www.iitk.ac.in/counsel/old/resources/pg/iwd.pdf)
+- **IIT Madras Engineering Unit** runs a Complaint Management and Monitoring System, with a mobile app and a web portal for civil and electrical maintenance. Users add a request with location and images, "view the current status of the request", and give feedback. Addition and alteration requests go through a separate Google Form. [IIT Madras Engineering Unit](https://enggunit.iitm.ac.in/)
+
+**Inferences**
+- Indian campuses have already proven the same shape CampusFix leans toward: college-email login, a structured complaint, and the reporter's own resolved and unresolved lists. In these examples, reporters see their *own* complaints only. None of the sources shows a view of other people's reports or a "me too", so duplicates are not handled at the reporter's end.
+- IIT Madras pairs a custom CMS with a Google Form for a lower-volume request type. That is precedent for a hybrid in which a Form is good enough for some flows.
+
+### A4. Smaller additions
+
+- *FixMyStreet status reliability (fact):* report status "generally relies on users coming back to mark an issue as fixed". Reports with no change for a long time are eventually marked "unknown". Councils on FixMyStreet Pro manage statuses directly. [FixMyStreet: Understanding report data](https://www.fixmystreet.com/about/understanding-report-data)
+- *SeeClickFix duplicates, as one city tells residents (fact):* "Duplicate issues are listed within the app". "submitting multiple requests on the same issue will not expedite services, and can potentially delay repair." [City of Midland, TX: SeeClickFix FAQs](https://golf.midlandtexas.gov/1372/SeeClickFix-FAQs)
+- *WhatsApp class groups in India (fact):* in a mixed-methods study at Sikkim University (4 groups over a year, 8 interviews), "students reported that sometimes these WhatsApp groups become burden and take a lot of time", but kept using them for class information. [Baishya & Maheshwari, *Contemporary Educational Technology*, 2020](https://doi.org/10.30935/cet.641765)
+
+### A5. What a Form + Sheet can and cannot do against the HOD's needs (hypotheses)
+
+| HOD / CampusFix need | Form + Sheet | Notes |
+|---|---|---|
+| Know who reported | **Can**, if the college email is Google Workspace (restrict to org + Verified) or Microsoft 365 (Microsoft Forms org-only + Record name) | With any other email host you only get a personal Google account |
+| Photo as proof | **Can**: file upload (sign-in required) | A photo alone does not prove when or where it was taken (inference) |
+| Room identified reliably | **Partly**: a dropdown, or a pre-filled link from a room QR code (unverified) | |
+| HOD doesn't forget | **Partly**: new-response email alerts and the Sheet as a running list | Nothing escalates or reminds about stale rows |
+| Reporter sees status | **Cannot natively** | Needs a staff status column and a separately published, redacted view |
+| Avoid duplicates | **Cannot** | The reporter can't see existing reports per room without leaking data |
+| Confirm fix with reporter | **Cannot natively** | Would need a manual email or a second form |
