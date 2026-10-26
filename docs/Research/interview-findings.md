@@ -57,3 +57,59 @@ For [issue #5](https://github.com/Dhruvivek/CampusFix/issues/5), using the [HOD 
 - Each report needs a location precise enough for a worker to find on their own. Today that knowledge reaches the worker only if someone walks them there or writes a note.
 - A Microsoft email setup suggests Microsoft sign-in is the natural fit if staff or students log in with college accounts.
 - With no grievance portal, there's nothing existing to integrate with or compete against.
+
+## Students
+
+For [issue #4](https://github.com/Dhruvivek/CampusFix/issues/4), using the [student interview guide](https://github.com/Dhruvivek/CampusFix/blob/interview-guides/docs/questionnaire/student-interview-guide.md).
+
+**Source:** formal interviews with 2 or 3 students (exact number not confirmed) plus informal conversations with the author's friends, passed on by the author in the author's own words on 2026-10-26. Only S1 was written up question by question. The interviews were in Hindi, and everything below is the author's English paraphrase; there are no original-language quotes. Lines in quotation marks are the author's English rendering of what S1 said.
+
+**Below target:** the issue asked for 5–8 students. The author chose to resolve it with this evidence.
+
+### Who was interviewed
+
+| ID | Year / section | Language | Recorded | Has reported before? |
+| --- | --- | --- | --- | --- |
+| S1 | 3rd / D | Hindi | No | Yes |
+| 1–2 others | Not passed on | Not passed on | Not passed on | Not passed on |
+
+### S1: what happened
+
+- **Last broken thing:** 2 of the 5 fans in S1's classroom stopped working within the last month. Effect: it was hot and hard to focus.
+- **What S1 did:** S1 and benchmates wrote an application and handed it to the deputy HOD. She said it would be fixed in 2 days, then forgot. About a week later they wrote a second application as a reminder. She apologised and the fans were fixed the next day, so about 8 days in total.
+- **Why an application:** "just telling someone about the problem, nobody takes it seriously." Handing it over was "not a big hassle." A written application "means you are not faking it and you are responsible for reporting it."
+- **How S1 found out:** saw the fans working again.
+- **Reported again later:** yes, a broken water cooler. When S1 handed in the application, the deputy said it had already been reported and would be fixed in 2 days, and it was. S1 hadn't known it was already reported.
+
+### S1: reaction to the idea (opinion, not finding)
+
+- **College email:** a Microsoft account. This matches the HOD's answer. How often S1 uses it was not asked.
+- **Name on the report:** "not a big thing, it is a proof that I saw a problem and report it." S1 expressed no worry about blame.
+- **Photo:** doesn't mind taking one.
+- **First reaction to the idea:** not asked.
+
+### Patterns the author reported across all conversations
+
+The author says most stories were like S1's. These patterns mix the formal interviews with the informal conversations. They aren't attributed to individual students, and how many students mentioned each one is unknown.
+
+- Teachers forget about the problem because of busy schedules.
+- The application doesn't reach the right person.
+- In most cases, students are afraid to give an application to the HOD or deputy HOD.
+- Staff sometimes neglect it and later say they never got the application, or that nobody reported the problem.
+- The same problem gets several applications, because students don't know it has already been reported.
+
+### Checklist coverage
+
+| Asked for in #4 | What we have |
+| --- | --- |
+| Last broken thing and what they did | S1 only |
+| Whether they've ever reported (aim: at least 2 who have) | S1 has; others not passed on |
+| College email, and whether it's Google | S1: Microsoft, not Google |
+| Fear of blame | S1: none. Author reports most students are afraid to approach the HOD or deputy, with no individual answers behind it, and S1 said the opposite. |
+| What they'd want to know after reporting | Not asked (Q9 unanswered) |
+
+### Not covered
+
+- Individual answers from the other 1–2 formally interviewed students.
+- S1: "anything else" in Part 1, Q9 (what S1 wondered while waiting), Q10, Q11 (first reaction to the idea), and how often S1 uses college email.
+- Any student who has never reported anything, at least not documented individually.
